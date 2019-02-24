@@ -1,6 +1,6 @@
 # Docker
 
-Docker Inc. is the main company behind docker technology. To really understand Docker, you should start with Containers.
+Docker Inc. is the main company behind docker technology. To really understand Docker, you should start with Containers. Containers are like light-weight, fast, virtual machines. Dockers makes running our app inside containers really easy. Apps running in containers are often referred as containerized apps.
 
 ### Containers
 
@@ -12,7 +12,7 @@ No one really knows what kind of infrastructure an application needs. At the sam
 
 Instead of running one application on a server, VMware, with HyperVisor technology, made it possible to run tons of applications on a single server via Virtual Machines. Virtual Machine \(VM\) is a slice of a physical hardware. Each VM needs a dedicated operating system.
 
-Along with the upsides, the downside of this model was, that these OS on each VMs consumed a ton of system resources just to get up and running without even running the application to start with. This leaves a small share of system resources for the application to run on. Along with this came the cost of OS licenses for each of those VMs. The model, without a doubt, is way better than historical implementations, however still had some pain-points in terms of efficient usage of system resources, cost of operation, administration, updates, anti-virus, etc. 
+Along with the upsides, the downside of this model was, that these OS on each VMs consumed a ton of system resources just to get up and running without even running the application to start with. This leaves a small share of system resources for the application to run on. Along with this came the cost of OS licenses for each of those VMs. The model, without a doubt, is way better than historical implementations, however still had some pain-points in terms of efficient usage of system resources, cost of operation, administration, updates, anti-virus, etc.
 
 ##### Solution \(Virtualization 2.0\)
 
