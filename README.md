@@ -25,9 +25,7 @@ Containers came to rescue. They are a slice of the operating system, as compared
 * Stateful applications
   * Has to remember stuff
 
-### Docker
-
-Enterprise Edition Advantages
+### Docker \(Enterprise Edition Advantages\)
 
 * Official Support
 * Stable
