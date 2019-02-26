@@ -17,6 +17,9 @@ $ docker info               # Display all containers, images, storage, plugins, 
 $ docker --help             #
 
 $ docker login              # Docker Hub credentials
+
+Inspection
+$ docker inspect <container_name>    # Even displays information like persistent volume location on host
 ```
 
 ### Images
@@ -94,10 +97,16 @@ $ docker run -it --name temp ubuntu:latest /bin/bash
     # -it refers to interactive. Opening in standard in-stream and assign it a terminal
     # To exit the container, without killing it, press Ctrl + P + Q
 
-$ docker container run -d --name web -p 8000:8080 <image_name>    # Runs a container
+# Runs a container
+$ docker container run -d --name web -p 8000:8080 -v $(pwd):/var/www/ -w "/var/www/" <image_name> <command>
+$ docker container run -d --name web -p 8000:8080 -v $(pwd):/var/www/ -w "/var/www/" node npm start
     # -d refers to running the container in a detached mode in background
     # web is the name of the container
     # -p refers to the port exposed. Here 8080 is the container port, 8000 is the docker host port
+    # -v refers to the volume (persistent storage)
+        pwd refers to present working directory for host location
+        /var/www refers to working directory for the container
+    # -w represents the working directory
 ```
 
 ##### Starting/Stopping a container
@@ -120,6 +129,7 @@ $ docker stop $(docker ps -aq)                    # Stop all the containers with
 $ docker rm <container_id>                  # Remove container by ID
 $ docker rm <container_name>                # Remove container by ID
 $ docker rm eloquent_murdock
+$ docker rm -v <container_name>             # Remove container by ID, along with cleaning the volume
 
 $ docker rm $(docker ps -aq)                # Remove all containers
 ```

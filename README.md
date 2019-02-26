@@ -55,5 +55,14 @@ Kubernetes is a powerful application orchestrator, however a smaller and simpler
   * Monitoring
   * Orchestration
 
+### Layered File System
 
+Docker images and containers rely on a layered file system.
+
+* Image Layers - All these Image layers are read-only
+* Container Layer - Container has its own thin layer on top of image layers, that allows you to read and write log files, database files, etc. This layer lives as long as the container lives and is not deleted.
+
+Containers can share image layers. Docker detects if an image layer already exists, then it won't download another copy of just that layer when some other container requests for an image.
+
+Volume is basically persistent storage for containers \(on docker host\), which means it can be shared and reused among containers. At core, a volume is a special directory in a container typically referred to as a data volume. Volume is typically located at `/var/www` however you can always customize the path, mounted at `/mnt` on the host. Since containers do not carry volumes, and since we are running docker locally, volumes are mounter on the local hard-disk.
 
