@@ -99,7 +99,14 @@ $ docker run -it --name temp ubuntu:latest /bin/bash
 
 # Runs a container
 $ docker container run -d --name web -p 8000:8080 -v $(pwd):/var/www/ -w "/var/www/" <image_name> <command>
-$ docker container run -d --name web -p 8000:8080 -v $(pwd):/var/www/ -w "/var/www/" node npm start
+$ docker container run -d \
+    --name web \
+    -p 8000:8080 \
+    -v $(pwd):/var/www/ \
+    -w "/var/www/" \
+    --link my-redis:redis-internal-name \
+    node npm start
+
     # -d refers to running the container in a detached mode in background
     # web is the name of the container
     # -p refers to the port exposed. Here 8080 is the container port, 8000 is the docker host port
