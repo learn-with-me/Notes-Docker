@@ -4,15 +4,9 @@ Goal of this page is to document running a Redis container in local and accessin
 
 ### Steps to setup a running container
 
-#### Step 0
+#### Pre-requisite
 
-Make sure you have the following installed:
-
-1. Docker
-
-List below is not required, I am just doing it to play around
-
-1. Redis - `brew install redis`
+Make sure you have docker installed.
 
 #### Step 1
 
@@ -76,7 +70,6 @@ redis:6379> exit
 # exit
 
 Connect from another linked container
-
 ```
 
 ### References
@@ -91,7 +84,6 @@ https://redis.io/topics/rediscli
 Docker Container
 https://markheath.net/post/exploring-redis-with-docker
 https://www.oskarlind.com/running-a-redis-instance-on-docker/
-
 ```
 
 
