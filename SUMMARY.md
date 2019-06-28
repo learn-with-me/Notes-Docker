@@ -8,4 +8,5 @@
 * [Setting up containers](setting-up-containers.md)
   * [Redis](setting-up-containers/redis.md)
   * [PostgreSQL](setting-up-containers/postgresql.md)
+  * [Elastic Search](setting-up-containers/elastic-search.md)
 
