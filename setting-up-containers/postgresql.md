@@ -18,7 +18,7 @@ $ docker run -d -p 5432:5432 -v postgres-data:/var/lib/postgresql/data --name te
 • We're also going to mount a volume (with -v), which will be used to store the database we create.
 • PostgreSQL stores its data in /var/lib/postgresql/data, so we're mounting our volume to that path.
 • The volume name will be postgres-data, and Docker will automatically create it
-   (just using storage on the Docker host's local disk) if a volume with this name doesn't already exist.
+(just using storage on the Docker host's local disk) if a volume with this name doesn't already exist.
 
 Check it is running
 $ docker ps
